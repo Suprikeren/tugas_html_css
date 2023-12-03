@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body {
+    background-color: whitesmoke;
+}
+
+#nav-logo img {
+    width: 100px;
+}
+header{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin: 0;
+    margin-left: 15px;
+    margin-right: 15px;
+    position: sticky;
+    justify-content: space-between; /* Meletakkan elemen ke kanan */
+    align-items: center; /* Menyusun elemen secara vertikal di tengah */
+    flex-direction: row;
+}
+header img {
+    width: 20px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: turquoise;
+    transition: color 1s;
+}
+
+main {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak menjadi vertikal */
+    flex: 1; /* Membuat main memenuhi sisa ketinggian body */
+}
+#home, #about, #contact {
+    margin-bottom: 20px; /* Atur margin antar artikel */
+}
+
+
+#home {
+    display: flex;
+    flex-flow: column nowrap;
+}
+#about {
+    display: flex;
+    flex-direction: row; /* Menjadikan tata letak elemen menjadi horizontal */
+}
+
+#about .text-wrapper {
+    flex: 1; /* Mengisi sisa ruang dengan teks */
+    margin-right: 20px; /* Memberikan ruang antara teks dan gambar */
+}
+
+#about aside {
+    width: 50%; /* Menetapkan lebar aside */
+}
+
+#about img {
+    width: 70%; /* Gambar mengisi lebar aside */
+    margin-left: 50px;
+    border-radius: 10px; /* Optional: Menambahkan border-radius pada gambar */
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    display: flex;
+    width: 100%;
+    background-color: aquamarine;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: auto; /* Footer tetap di paling bawah */
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+  }
+   
+
+@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+        #about {
+            flex-direction: column;
+        }
+        #about img {
+            width: 100%; 
+            margin-left: 0; 
+            margin-top: 20px; 
+        }
+        #about aside {
+            flex-direction: row;
+            align-self: stretch;
+        }
+        nav ul {
+          justify-content: center;
+        }
+      }
+}
